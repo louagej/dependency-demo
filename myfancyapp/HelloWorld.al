@@ -5,8 +5,11 @@
 pageextension 50000 CustomerListExt extends "Customer List"
 {
     trigger OnOpenPage();
+    var
+        MobToolbox: Codeunit "MOB Toolbox";
+        BinGS1Ai: Text[2];
     begin
-        Message('App published: Hello world');
+        MobToolBox.Add_GS1Ai(BinGS1Ai, '92');
     end;
 }
 
